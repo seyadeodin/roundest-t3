@@ -13,5 +13,16 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'raw.githubusercontent.com',
+        protocol: 'https',
+        port: '',
+        pathname: '/PokeAPI/sprites/master/sprites/pokemon/**'
+
+      }
+    ],
+  }
 };
 export default config;

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { getOptionsForVote } from "../utils/getRandomPokemon";
 import type { RouterOutputs } from "../utils/trpc";
 import { trpc } from "../utils/trpc"
+import Image from "next/image";
 
 interface HomeProps {
   votingOptions: number[]
@@ -80,9 +81,12 @@ const PokemonListing: React.FC<{
 
   return (
     <div className="w-64 flex flex-col items-center">
-      <img
+      <Image
         className="w-full"
         src={pokemon.sprites.front_default}
+        width={256}
+        height={256}
+        layout='fixed'
       />
       <div className="text-xl text-center mt-[-2rem] capitalize">
         {pokemon.name}
